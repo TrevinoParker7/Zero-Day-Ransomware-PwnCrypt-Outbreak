@@ -13,7 +13,6 @@ A new ransomware strain, **PwnCrypt**, has emerged. It utilizes a PowerShell-bas
 - Windows 10 Virtual Machines (Microsoft Azure)
 - EDR Platform: Microsoft Defender for Endpoint
 - Kusto Query Language (KQL)
-- Tor Browser
 ---
 
 ### **1️⃣ Preparation**  
