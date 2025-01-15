@@ -27,7 +27,20 @@ A new ransomware strain, **PwnCrypt**, has emerged. It utilizes a PowerShell-bas
 ### **2️⃣ Data Collection**  
 📌 **Goal:** Gather logs and evidence from endpoints, file systems, and network traffic.  
 
-#### 🖥️ **Suspicious PowerShell Command Query:**  
+#### 🖥️ **Suspicious PowerShell Command Query:** 
+```kql
+DeviceFileEvents
+| top 20 by Timestamp desc
+```
+```kql
+DeviceNetworkEvents
+| top 20 by Timestamp desc
+```
+```kql
+DeviceProcessEvents
+| top 20 by Timestamp desc
+```
+
 ```kql
 DeviceProcessEvents
 | where ProcessCommandLine has "Invoke-WebRequest" and ProcessCommandLine has "pwncrypt.ps1"
